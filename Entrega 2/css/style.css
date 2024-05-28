@@ -1,0 +1,174 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-layout
+{display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 7% 80% 40% 40% 40% 6%;
+    grid-template-areas: "header header header header"
+                        "main main main main"
+                        "text-1 text-1 picture-1 picture-1"
+                        "picture-2 picture-2 text-2 text-2"
+                        "contenedor contenedor contenedor contenedor"
+                        "footer footer footer footer";
+                        
+}
+
+.header
+{
+    background-color:#3C4729;
+    padding: 20;
+    color: #FFFFFF;
+    grid-area: header;
+    font-family: "Poppins";
+    position: sticky;
+    top: 0;
+}
+
+h1
+{
+    font-family: "Poppins";
+    font-size: 20;
+    float: left;
+    display: inline-block;
+}
+
+.indice
+{   text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Poppins";
+     margin-right: 20px;
+     float: right;
+}
+
+h2
+{
+    font-family: "Poppins";
+    font-size: 32;
+    color: #FFFFFF;
+}
+
+button
+{   background-color: #ffffff;
+    color: #3C4729;
+    padding: 10 20 10 20;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+button:hover
+{background-color: #e6ecdd;
+}
+
+
+.main
+{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: url("../multimedia/panoramica.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center center;
+    text-align: center;
+    padding: 0 200 0 200;
+    grid-area: main;
+    font-family: "Poppins";
+    font-size: 16;
+    color: #FFFFFF;
+    align-items: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.info-title h2 {
+    margin-bottom: 8px;
+}
+
+.info-title p {
+    margin-bottom: 20px;
+}
+
+.info-title a {
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.text-1
+{
+    grid-area: text-1;
+    padding: 80;
+}
+
+.text-1 h3
+{
+    font-family: "Poppins";
+    font-size: 24;
+    color: #3C4729;
+    margin: 40 0 12 0;
+}
+
+.picture-1
+{
+    grid-area: picture-1;
+    background-image: url("../multimedia/sala.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.text-2
+{
+    grid-area: text-2;
+    padding: 80;
+}
+
+.text-2 h3
+{
+    font-family: "Poppins";
+    font-size: 24;
+    color: #3C4729;
+    margin: 40 0 12 0;
+}
+
+
+.picture-2
+{
+    grid-area: picture-2;
+    background-image: url("../multimedia/16062022-image00011.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.footer
+{
+    background-color:#3C4729;
+    padding: 20;
+    grid-area: footer;
+    color: #FFFFFF;
+}
+
+.footer p
+{
+    float: left;
+    font-family: "Poppins";
+    display: inline-block;
+}
+
+.rrss
+{
+    float: right;
+}
+
+.footer a
+{    margin-left: 20;
+}
