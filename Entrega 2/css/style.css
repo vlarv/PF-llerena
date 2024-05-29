@@ -7,14 +7,14 @@
 
 .grid-layout
 {display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 7% 80% 40% 40% 40% 6%;
-    grid-template-areas: "header header header header"
-                        "main main main main"
-                        "text-1 text-1 picture-1 picture-1"
-                        "picture-2 picture-2 text-2 text-2"
-                        "contenedor contenedor contenedor contenedor"
-                        "footer footer footer footer";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 100vh 50vh 50vh auto auto;
+    grid-template-areas: "header header"
+                        "main main"
+                        "text-1 picture-1"
+                        "picture-2 text-2"
+                        "resenas resenas"
+                        "footer footer";
                         
 }
 
@@ -107,7 +107,7 @@ button:hover
 .text-1
 {
     grid-area: text-1;
-    padding: 80;
+    padding: 40;
 }
 
 .text-1 h3
@@ -129,7 +129,7 @@ button:hover
 .text-2
 {
     grid-area: text-2;
-    padding: 80;
+    padding: 40;
 }
 
 .text-2 h3
@@ -149,10 +149,91 @@ button:hover
     background-size: cover;
 }
 
+.resenas
+{
+    grid-area: resenas;
+    font-family: "Poppins";
+    color: #3C4729;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "resenat resenat resenat"
+    "c1 c2 c3"
+}
+
+.resenas p
+{
+    color: #1f1f1f;
+}
+
+.resenas h2
+{
+    color:#3C4729;
+    display: inline-block;
+}
+
+.contenedor
+{
+    background-color: #e6ecdd;
+    margin: 40 40 100 40;
+    padding: 60 20 60 20;
+    font-family: "Poppins";
+    border-radius: 20px;
+    text-align: center;
+}
+
+.resenat
+{
+    text-align: center;
+    margin-top: 80;
+    grid-column: span 3;
+}
+
+.contenedor img
+{
+    border-radius: 200px;
+}
+
+.contenedor h3
+{
+    color:#3C4729;
+    margin-top: 32;
+    margin-bottom: 20;
+}
+
+.contenedor h4
+{
+    color: #1f1f1f;
+    margin-top: 12;
+}
+
+.contenedor.c1
+{
+    grid-area: c1;
+}
+
+.contenedor.c2
+{
+    grid-area: c2;
+}
+
+.contenedor.c3
+{
+    grid-area: c3;
+}
+
+.contenedor.c4
+{
+    grid-area: c4;
+}
+
+
 .footer
 {
     background-color:#3C4729;
-    padding: 20;
+    padding: 20 20 40 20;
     grid-area: footer;
     color: #FFFFFF;
 }
