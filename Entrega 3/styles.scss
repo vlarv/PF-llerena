@@ -1,0 +1,319 @@
+$color-principal:#3C4729;
+$color-principal-oscuro:#242d16;
+$color-text:#1f1f1f;
+$color-clear:#FFFFFF;
+$color-principal-claro:#eef4e4;
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-layout
+{display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 100vh auto auto auto auto auto;
+    grid-template-areas: "header header"
+                        "main main"
+                        "text-1 picture-1"
+                        "picture-2 text-2"
+                        "resenas resenas"
+                        "contacto contacto"
+                        "footer footer";
+                        
+}
+
+header
+{
+    background-color:$color-principal;
+    padding: 20;
+    color: $color-clear;
+    grid-area: header;
+    font-family: "Poppins";
+    position: sticky;
+    top: 0;
+}
+
+header a:hover
+{
+    text-decoration: underline;
+}
+
+h1
+{
+    font-family: "Poppins";
+    font-size: 20;
+    float: left;
+    display: inline-block;
+}
+
+p
+{
+    font-family: "Poppins";
+    color: $color-text;
+}
+
+.indice
+{   text-decoration: none;
+    color: $color-clear;
+    font-family: "Poppins";
+     margin-right: 20px;
+     float: right;
+}
+
+h2
+{
+    font-family: "Poppins";
+    font-size: 32;
+    color: $color-clear;
+}
+
+button
+{   background-color: $color-clear;
+    color: $color-principal;
+    padding: 10 32 10 32;
+    font-size: 16px;
+    font-family: "Poppins";
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 40px;
+    transition-property: background-color border-radius box-shadow;
+    transition-duration: 300ms;
+    transition-timing-fuction: ease;
+}
+
+button:hover
+{   background-color: $color-principal-claro;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px $color-text;
+}
+
+
+main
+{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    background-image: url("multimedia/panoramica.jpg");
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-position: center center;
+    text-align: center;
+    padding: 0 200 0 200;
+    grid-area: main;
+    font-family: "Poppins";
+    font-size: 16;
+    color: $color-clear;
+    align-items: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.info-title h2 {
+    margin-bottom: 8px;
+}
+
+.info-title p {
+    margin-bottom: 20px;
+    color: $color-clear;
+}
+
+.info-title a {
+    display: inline-block;
+    margin-bottom: 32px;
+}
+
+.text-1
+{
+    grid-area: text-1;
+    padding: 40 40 60 40;
+}
+
+.text-1 h3
+{
+    font-family: "Poppins";
+    font-size: 24;
+    color: $color-principal;
+    margin: 40 0 12 0;
+}
+
+.picture-1
+{
+    grid-area: picture-1;
+    background-image: url("multimedia/sala.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.text-2
+{
+    grid-area: text-2;
+    padding: 40 40 60 40;
+}
+
+.text-2 h3
+{
+    font-family: "Poppins";
+    font-size: 24;
+    color: $color-principal;
+    margin: 40 0 12 0;
+}
+
+
+.picture-2
+{
+    grid-area: picture-2;
+    background-image: url("multimedia/home-office.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.resenas
+{
+    grid-area: resenas;
+    font-family: "Poppins";
+    color: $color-principal;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "resenat resenat resenat"
+    "c1 c2 c3"
+}
+
+.resenas p
+{
+    color: $color-text;
+}
+
+.resenas h2
+{
+    color:$color-principal;
+    display: inline-block;
+}
+
+.contenedor
+{
+    background-color: $color-principal-claro;
+    margin: 40 40 40 40;
+    padding: 60 20 60 20;
+    font-family: "Poppins";
+    border-radius: 20px;
+    text-align: center;
+}
+
+.contenedor:hover
+{
+    transform: translateY(-12px);
+}
+
+.resenat
+{
+    text-align: center;
+    margin-top: 80;
+    grid-column: span 3;
+}
+
+.contenedor img
+{
+    border-radius: 200px;
+}
+
+.contenedor h3
+{
+    color:$color-principal;
+    margin-top: 32;
+    margin-bottom: 20;
+}
+
+.contenedor h4
+{
+    color: $color-text;
+    margin-top: 12;
+}
+
+.contenedor.c1
+{
+    grid-area: c1;
+}
+
+.contenedor.c2
+{
+    grid-area: c2;
+}
+
+.contenedor.c3
+{
+    grid-area: c3;
+}
+
+.contenedor.c4
+{
+    grid-area: c4;
+}
+
+.contacto
+{
+    grid-area: contacto;
+    text-align: center;
+    margin: 40 40 80 40;
+}
+
+.contacto h2
+{
+    color: $color-principal;
+}
+
+.contacto button
+{
+    color: $color-clear;
+    background-color: $color-principal;
+}
+
+.contacto button:hover
+{
+    color: $color-clear;
+    background-color: $color-principal-oscuro;
+    box-shadow: 0px 2px 5px $color-principal-claro;
+}
+
+.contacto input
+{
+    font-family: "Poppins";
+    padding: 8;
+    margin: 20 8 40 8;
+}
+
+footer
+{
+    background-color:$color-principal;
+    padding: 20 20 40 20;
+    grid-area: footer;
+    color: $color-clear;
+}
+
+footer p
+{
+    float: left;
+    font-family: "Poppins";
+    display: inline-block;
+    color: $color-clear;
+}
+
+.rrss
+{
+    float: right;
+}
+
+footer a
+{    margin-left: 20;
+}
+
+@import 'mobile';
+
+@import 'tablet';
